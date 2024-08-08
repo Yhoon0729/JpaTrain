@@ -1,0 +1,16 @@
+{{>layouts/header}}
+<form class="container" action="/members/update" method="post">
+    <input name="id" type="hidden" value="{{member.id}}">
+    <div class="mb-3">
+        <label class="form-label">이메일</label>
+        <input type="email" class="form-control" name="email" value="{{member.email}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">비밀번호</label>
+        <input type="password" class="form-control" name="password" value="{{member.password}}">
+    </div>
+    <button type="submit" class="btn btn-primary">회원정보 수정</button>
+    <a href="/members/{{member.id}}">뒤로가기</a>
+</form>
+
+{{>layouts/footer}}
